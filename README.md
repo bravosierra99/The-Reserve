@@ -6,14 +6,14 @@ A year ago, I started to dive deeper into the world of wine. I wanted to get a b
 My setup is for wine, but you can modify it easily and track your craft beers, different coffee beans, whiskies, gins, or whatever you like. 
 
 I use Obsidian and the following plugins:
-- Dataview
-- Metadata Menu
-- QuickAdd
-- Paste image rename
+- ![Dataview](https://github.com/blacksmithgu/obsidian-dataview)
+- ![Metadata Menu](https://github.com/mdelobelle/metadatamenu)
+- ![QuickAdd](https://github.com/chhoumann/quickadd)
+- ![Paste image rename](https://github.com/reorx/obsidian-paste-image-rename)
 
-and the Minimal Theme with its helper plugins
-- Minimal Theme Settings
-- Style Settings
+and the ![Minimal Theme](https://github.com/kepano/obsidian-minimal) with its companion plugins
+- ![Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings)
+- ![Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
 
 Additionally, I use "![The Unlabeler](https://unlabeler.app/)" app (for iOS/iPad/MacOS) to get nice, undistorted, and rectangular wine labels. 
 
