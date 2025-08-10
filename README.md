@@ -17,4 +17,4 @@ and the ![Minimal Theme](https://github.com/kepano/obsidian-minimal) with its co
 
 Additionally, I use "![The Unlabeler](https://unlabeler.app/)" app (for iOS/iPad/MacOS) to get nice, undistorted, and rectangular wine labels. 
 
-
+To set everything up from the scratch I wrote a step-by-step instruction with all plugins, settings and code examples: 
