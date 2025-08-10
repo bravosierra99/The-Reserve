@@ -104,16 +104,19 @@ For the labels I use "The Unlabeler“ app, because I want to have nice, flat, u
 
 <img width="370" height="518" alt="grafik" src="https://github.com/user-attachments/assets/87cac3f0-3178-423c-94c4-fa4bee04afa0" />
 .
+<br/><br/>
 
 With the app your label will look like this:
 
 <img width="370" height="430" alt="grafik" src="https://github.com/user-attachments/assets/6debfd2c-6173-449c-b10c-8e0637f6214f" />
-.
+.  
+<br/><br/>
 
 Additionally you can add a star rating, which is very nice for the card view, we will set up in a moment.
 
 <img width="370" height="473" alt="grafik" src="https://github.com/user-attachments/assets/834025d7-556a-4558-a7cf-43d0070567a7" />
-.
+.  
+<br/><br/>
 
 Your wine folder should now look like this:
 
