@@ -312,7 +312,7 @@ Here is my code for "Shopping List ShopA“ (replace "ShopA“ with the right sh
 ````
 ### Rebuy
 ```dataview
-table Label, Winemaker, Variety, Vintage, Country-Region, Price, Buy 
+table link(Label,"100") as Label, Winemaker, Variety, Vintage, Country-Region, Price, Buy 
 from "1_Wines"
 where PurchaseSource = "ShopA" and Buy > 0 and Label
 sort Country-Region asc, ValueForMoney desc
@@ -320,7 +320,7 @@ sort Country-Region asc, ValueForMoney desc
 
 ### New wine
 ```dataview
-table Label, Winemaker, Variety, Vintage, Country-Region, Price, Buy 
+table link(Label,"100") as Label, Winemaker, Variety, Vintage, Country-Region, Price, Buy 
 from "1_Wines"
 where PurchaseSource = "ShopA" and Buy > 0 and !Label
 sort Country-Region asc, ValueForMoney desc
