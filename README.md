@@ -19,4 +19,4 @@ Additionally, I use "![The Unlabeler](https://unlabeler.app/)" app (for iOS/iPad
 
 To set everything up from the scratch I wrote a step-by-step instruction with all plugins, settings and code examples: [Step-by-step.md](Step-by-step.md)
 
-<video src="Film_Wine_Cellar.mp4" />
+<video src="[Film_Wine_Cellar.mp4](https://github.com/Peptino/Obsidian-Wine-Collection/blob/main/Film_Wine_Cellar.mp4)" />
