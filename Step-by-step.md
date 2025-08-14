@@ -100,7 +100,7 @@ For _stars_ click on the chevron and select e.g. 5 stars. To test the following 
 
 With drag and drop paste your _label_ picture. On a Mac you can drag it from your photos app and drop it in your note directly after "Label::“. When you release the mouse button a window pops up asking you whether you want to rename the picture to "Alvaro Palacios - Finca Dofí Priorat - 2016.jpeg“. Confirm by clicking on "Rename“. And that’s it. 
 
-For the labels I use "The Unlabeler“ app, because I want to have nice, flat, undistorted labels. Without the app you can just crop the image of the bottle to see (nearly) just the label, but it is still not nice:
+For the labels I use "[The Unlabeler](https://unlabeler.app)“ app, because I want to have nice, flat, undistorted labels. In the interest of transparency, I should mention that I'm the developer of this app. Without the app you can just crop the image of the bottle to see (nearly) just the label, but it is still not nice:
 
 <img width="370" height="518" alt="grafik" src="https://github.com/user-attachments/assets/87cac3f0-3178-423c-94c4-fa4bee04afa0" />
 .
