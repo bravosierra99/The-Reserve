@@ -5,6 +5,12 @@ A year ago, I started to dive deeper into the world of wine. I wanted to get a b
 
 My setup is for wine, but you can modify it easily and track your craft beers, different coffee beans, whiskies, gins, or whatever you like. 
 
+The setup has the following features:
+- A complete list of all wines you’ve tasted
+- Card view with all the labels
+- “Fridge” view of the wines currently in your inventory
+- Automated shopping lists for your favorite wine stores
+
 I use Obsidian and the following plugins:
 - ![Dataview](https://github.com/blacksmithgu/obsidian-dataview)
 - ![Metadata Menu](https://github.com/mdelobelle/metadatamenu)
