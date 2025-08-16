@@ -10,6 +10,7 @@ The setup has the following **features**:
 - Card view with all the labels
 - “Fridge” view of the wines currently in your inventory
 - Automated shopping lists for your favorite wine stores  
+<br/>
 
 I use Obsidian and the following plugins:
 - ![Dataview](https://github.com/blacksmithgu/obsidian-dataview)
