@@ -3,7 +3,7 @@
 const {fieldModifier: f} = this.app.plugins.plugins["metadata-menu"].api;
 
 const pages = dv.pages('"1_Whiskeys"')
-	.filter(p => p.Type === "Bourbon")
+	.filter(p => p.Type && p.Type.toLowerCase().includes("bourbon"))
 	.sort((a, b) => (b["Total Score"] ?? 0) - (a["Total Score"] ?? 0)); // Descending
 
 dv.table(["Bottle","Whiskey","Distiller", "Name", "Age", "Proof", "Region-State", "Stars", "Total Score", "Value for Money", "Inventory", "Purchase Source", "Price", "Buy"],
@@ -93,7 +93,7 @@ await Promise.all(pages.map(async p => [
 const {fieldModifier: f} = this.app.plugins.plugins["metadata-menu"].api;
 
 const pages = dv.pages('"1_Whiskeys"')
-	.filter(p => p.Type && !["Bourbon", "Rye Whiskey", "Tennessee Whiskey"].includes(p.Type))
+	.filter(p => p.Type && !p.Type.toLowerCase().includes("bourbon") && !["Rye Whiskey", "Tennessee Whiskey"].includes(p.Type))
 	.sort((a, b) => (b["Total Score"] ?? 0) - (a["Total Score"] ?? 0)); // Descending
 
 dv.table(["Bottle","Whiskey","Distiller", "Name", "Type", "Age", "Proof", "Region-State", "Stars", "Total Score", "Value for Money", "Inventory", "Purchase Source", "Price", "Buy"],

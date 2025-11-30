@@ -68,7 +68,7 @@
       "templatePath": "9_Templates/Tasting Note Whiskey.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "{{VALUE:Distiller}} - {{VALUE:WhiskeyName}} - {{VALUE:AgeStatement}}"
+        "format": "{{VALUE:Distiller}} - {{VALUE:WhiskeyName}} - {{VALUE:Year}}"
       },
       "folder": {
         "enabled": true,

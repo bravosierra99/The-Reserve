@@ -1,9 +1,10 @@
 ---
 fileClass: Whiskey
-Name: "{{value:Distiller}} - {{value:WhiskeyName}} - {{value:AgeStatement}}"
+Name: "{{value:Distiller}} - {{value:WhiskeyName}} - {{value:Year}}"
 Distiller: "{{value:Distiller}}"
 WhiskeyName: "{{value:WhiskeyName}}"
-AgeStatement: "{{value:AgeStatement}}"
+AgeStatement:
+Year: "{{value:Year}}"
 Type:
 MashBill:
 BarrelType:

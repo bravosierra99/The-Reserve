@@ -10,7 +10,7 @@ cssclasses:
 const {fieldModifier: f} = this.app.plugins.plugins["metadata-menu"].api;
 
 const pages = dv.pages('"1_Whiskeys"')
-	.filter(p => p.Type === "Bourbon" && p.BottleImage)
+	.filter(p => p.Type && p.Type.toLowerCase().includes("bourbon") && p.BottleImage)
 	.sort((a, b) => (b["Total Score"] ?? 0) - (a["Total Score"] ?? 0)); // Descending
 
 dv.table(["Bottle","Whiskey"],
@@ -64,7 +64,7 @@ await Promise.all(pages.map(async p => [
 const {fieldModifier: f} = this.app.plugins.plugins["metadata-menu"].api;
 
 const pages = dv.pages('"1_Whiskeys"')
-	.filter(p => p.Type && !["Bourbon", "Rye Whiskey", "Tennessee Whiskey"].includes(p.Type) && p.BottleImage)
+	.filter(p => p.Type && !p.Type.toLowerCase().includes("bourbon") && !["Rye Whiskey", "Tennessee Whiskey"].includes(p.Type) && p.BottleImage)
 	.sort((a, b) => (b["Total Score"] ?? 0) - (a["Total Score"] ?? 0)); // Descending
 
 dv.table(["Bottle","Whiskey"],

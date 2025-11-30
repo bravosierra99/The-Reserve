@@ -15,6 +15,11 @@ fields:
     options: {}
     path: ""
     id: WhAge0
+  - name: Year
+    type: Input
+    options: {}
+    path: ""
+    id: WhYear
   - name: Type
     type: Select
     options:
@@ -191,6 +196,7 @@ fieldsOrder:
   - WhProf
   - WhBarr
   - WhMash
+  - WhYear
   - WhAge0
   - WhName
   - WhDist
