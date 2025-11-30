@@ -9,6 +9,11 @@
     "Taste": "number",
     "Aftertaste": "number",
     "Overal": "number",
-    "Overall": "number"
+    "Overall": "number",
+    "Nose": "number",
+    "Palate": "number",
+    "Finish": "number",
+    "Proof": "number",
+    "Total Score": "number"
   }
 }
