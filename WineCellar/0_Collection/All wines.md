@@ -35,7 +35,7 @@ const pages = dv.pages('"1_Wines"')
 	.filter(p => p.Type === "Red wine")
 	.sort((a, b) => (b["ValueForMoney"] ?? 0) - (a["ValueForMoney"] ?? 0)); // Descending
 
-dv.table(["Label","Wine","Winemaker", "Name", "Variety", "Vintage", "Country-Region", "Stars", "Value for Money", "Inventory", "Purchase Source", "Price", "Buy"],
+dv.table(["Label","Wine","Winemaker", "Name", "Variety", "Vintage", "Country-Region", "Stars","Total Score", "Value for Money", "Inventory", "Purchase Source", "Price", "Buy"],
 await Promise.all(pages.map(async p => [
 	p.Label,
 	p.file.link, 
@@ -45,6 +45,7 @@ await Promise.all(pages.map(async p => [
 	p.Vintage,
 	p["Country-Region"],
 	await f(dv, p, "Stars", {options: {showAddField: true}}),
+	p["Total Score"],
 	p.ValueForMoney,
 	await f(dv, p, "Inventory", {options: {alwaysOn: true, showAddField: true}}),
 	p.PurchaseSource,

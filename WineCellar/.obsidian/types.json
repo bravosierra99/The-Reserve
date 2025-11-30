@@ -1,0 +1,14 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "Score Total": "number",
+    "Appearance": "number",
+    "Aroma": "number",
+    "Taste": "number",
+    "Aftertaste": "number",
+    "Overal": "number",
+    "Overall": "number"
+  }
+}

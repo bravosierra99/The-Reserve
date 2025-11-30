@@ -38,3 +38,5 @@ await Promise.all(pages.map(async p => [
 	p.file.link, 
 	])
 ))
+```
+
