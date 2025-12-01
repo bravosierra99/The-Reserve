@@ -116,45 +116,12 @@ fields:
       max: 5
     path: ""
     id: WhValu
-  - name: Nose
-    type: Number
+  - name: BottleOpenedDate
+    type: Date
     options:
-      min: 0
-      max: 10
-      step: 0.1
+      dateFormat: "YYYY-MM-DD"
     path: ""
-    id: WhNose
-  - name: Palate
-    type: Number
-    options:
-      min: 0
-      max: 10
-      step: 0.1
-    path: ""
-    id: WhPala
-  - name: Finish
-    type: Number
-    options:
-      min: 0
-      max: 10
-      step: 0.1
-    path: ""
-    id: WhFini
-  - name: Overall
-    type: Number
-    options:
-      min: 0
-      max: 10
-      step: 0.1
-    path: ""
-    id: WhOver
-  - name: Total Score
-    type: Formula
-    options:
-      autoUpdate: true
-      formula: current.Nose + current.Palate + current.Finish + current.Overall
-    path: ""
-    id: WhTota
+    id: WhOpen
   - name: BottleImage
     type: Media
     options:
@@ -164,7 +131,7 @@ fields:
       thumbnailSize: "100"
     path: ""
     id: WhBImg
-version: "2.37"
+version: "3.0"
 limit: 20
 mapWithTag: false
 icon: coffee
@@ -176,17 +143,13 @@ extends:
 savedViews: []
 favoriteView:
 fieldsOrder:
-  - WhOver
-  - WhFini
-  - WhPala
-  - WhNose
   - WhBImg
   - WhPric
   - WhStar
-  - WhTota
   - WhValu
   - WhInve
   - WhBuy0
+  - WhOpen
   - WhRegi
   - WhType
   - WhPLin

@@ -3,5 +3,7 @@ WineCellar/.obsidian/workspace.json
 WineCellar/.obsidian/workspace-mobile.json
 WineCellar/.obsidian/hotkeys.json
 WineCellar/.obsidian/graph.json
-WineCellar/0_Collection/
+
+# Ignore personal data, but track framework files
 WineCellar/1_Wines/
+WineCellar/1_Whiskeys/
