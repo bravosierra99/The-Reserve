@@ -140,50 +140,42 @@ button.style.fontSize = '14px';
 
 button.addEventListener('click', async () => {
     try {
-        // Use QuickAdd to create the tasting
-        const quickadd = app.plugins.plugins.quickadd?.api;
+        // Get input from user
+        const date = await app.plugins.plugins['metadata-menu'].api.inputPrompt(
+            "Date (YYYY-MM-DD)",
+            new Date().toISOString().split('T')[0]
+        );
+        if (!date) return;
 
-        if (quickadd) {
-            // Try to trigger QuickAdd's Whiskey Tasting choice
-            await quickadd.executeChoice("Whiskey Tasting");
-        } else {
-            // Fallback: show simple prompts
-            const date = await app.plugins.plugins['metadata-menu'].api.inputPrompt(
-                "Date (YYYY-MM-DD)",
-                new Date().toISOString().split('T')[0]
-            );
-            if (!date) return;
+        const taster = await app.plugins.plugins['metadata-menu'].api.inputPrompt("Taster Name", "");
+        if (!taster) return;
 
-            const taster = await app.plugins.plugins['metadata-menu'].api.inputPrompt("Taster Name", "");
-            if (!taster) return;
+        const days = await app.plugins.plugins['metadata-menu'].api.inputPrompt("Days from crack", "0");
+        const fill = await app.plugins.plugins['metadata-menu'].api.inputPrompt("Fill level (%)", "100");
 
-            const days = await app.plugins.plugins['metadata-menu'].api.inputPrompt("Days from crack", "0");
-            const fill = await app.plugins.plugins['metadata-menu'].api.inputPrompt("Fill level (%)", "100");
+        // Read template
+        const templatePath = "WineCellar/9_Templates/Tasting.md";
+        const template = await app.vault.adapter.read(templatePath);
 
-            // Read template
-            const templatePath = "WineCellar/9_Templates/Tasting.md";
-            const template = await app.vault.adapter.read(templatePath);
+        // Replace template variables
+        let content = template
+            .replace(/{{value:Date}}/g, date)
+            .replace(/{{value:TasterName}}/g, taster)
+            .replace(/{{value:DaysFromCrack}}/g, days || "0")
+            .replace(/{{value:FillLevel}}/g, fill || "100")
+            .replace(/{{value:LinkedBottle}}/g, `[[${bottleName}]]`);
 
-            // Replace template variables
-            let content = template
-                .replace(/{{value:Date}}/g, date)
-                .replace(/{{value:TasterName}}/g, taster)
-                .replace(/{{value:DaysFromCrack}}/g, days || "0")
-                .replace(/{{value:FillLevel}}/g, fill || "100")
-                .replace(/{{value:LinkedBottle}}/g, `[[${bottleName}]]`);
+        // Create file
+        const fileName = `Tasting-${date}-${taster}.md`;
+        const filePath = `WineCellar/${folderPath}/${fileName}`;
 
-            // Create file
-            const fileName = `Tasting-${date}-${taster}.md`;
-            const filePath = `WineCellar/${folderPath}/${fileName}`;
+        await app.vault.create(filePath, content);
 
-            await app.vault.create(filePath, content);
+        // Open the new file
+        const file = app.vault.getAbstractFileByPath(filePath);
+        await app.workspace.getLeaf().openFile(file);
 
-            // Open the new file
-            const file = app.vault.getAbstractFileByPath(filePath);
-            await app.workspace.getLeaf().openFile(file);
-
-            new Notice("Tasting created successfully!");
-        }
+        new Notice("Tasting created successfully!");
     } catch (error) {
         console.error("Error creating tasting:", error);
         new Notice(`Error: ${error.message}`);
