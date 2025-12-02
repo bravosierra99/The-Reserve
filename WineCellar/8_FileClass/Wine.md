@@ -45,10 +45,10 @@ fields:
     options:
       sourceType: ValuesList
       valuesList:
-        "1": Red wine
-        "2": White wine
-        "3": Rose wine
-        "4": Champagne
+        - Red wine
+        - White wine
+        - Rose wine
+        - Champagne
     path: ""
     id: yi4Ej9
   - name: Country-Region
@@ -88,12 +88,12 @@ fields:
     options:
       sourceType: ValuesList
       valuesList:
-        "1": --
-        "2": ⭐️
-        "3": ⭐️⭐️
-        "4": ⭐️⭐️⭐️
-        "5": ⭐️⭐️⭐️⭐️
-        "6": ⭐️⭐️⭐️⭐️⭐️
+        - --
+        - ⭐️
+        - ⭐️⭐️
+        - ⭐️⭐️⭐️
+        - ⭐️⭐️⭐️⭐️
+        - ⭐️⭐️⭐️⭐️⭐️
     path: ""
     id: DZ1o6Z
   - name: Price
