@@ -103,7 +103,53 @@ if (tastings.length === 0) {
 
 ### Create New Tasting
 
-To add a new tasting for this bottle, use the QuickAdd command or create a new note in the `1_Whiskeys/{{value:Distiller}} - {{value:WhiskeyName}} - {{value:Year}}` folder.
+```dataviewjs
+const bottleName = dv.current().file.name;
+const folderPath = `1_Whiskeys/${bottleName}`;
+
+// Create button
+const button = dv.el('button', 'Add New Tasting');
+button.style.padding = '8px 16px';
+button.style.backgroundColor = '#4CAF50';
+button.style.color = 'white';
+button.style.border = 'none';
+button.style.borderRadius = '4px';
+button.style.cursor = 'pointer';
+button.style.fontSize = '14px';
+
+button.addEventListener('click', async () => {
+    const date = prompt("Date (YYYY-MM-DD):", new Date().toISOString().split('T')[0]);
+    if (!date) return;
+
+    const taster = prompt("Taster Name:");
+    if (!taster) return;
+
+    const days = prompt("Days from crack:", "0");
+    const fill = prompt("Fill level (%):", "100");
+
+    // Read template
+    const templatePath = "WineCellar/9_Templates/Tasting.md";
+    const template = await app.vault.adapter.read(templatePath);
+
+    // Replace template variables
+    let content = template
+        .replace(/{{value:Date}}/g, date)
+        .replace(/{{value:TasterName}}/g, taster)
+        .replace(/{{value:DaysFromCrack}}/g, days)
+        .replace(/{{value:FillLevel}}/g, fill)
+        .replace(/{{value:LinkedBottle}}/g, `[[${bottleName}]]`);
+
+    // Create file
+    const fileName = `Tasting-${date}-${taster}.md`;
+    const filePath = `WineCellar/${folderPath}/${fileName}`;
+
+    await app.vault.create(filePath, content);
+
+    // Open the new file
+    const file = app.vault.getAbstractFileByPath(filePath);
+    await app.workspace.getLeaf().openFile(file);
+});
+```
 
 ## Bottle Image
 BottleImage::

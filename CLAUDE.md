@@ -4,17 +4,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is an Obsidian vault for tracking and managing a personal wine collection. The vault uses a structured metadata system powered by Obsidian plugins to create tasting notes, track inventory, maintain shopping lists, and visualize wine labels in various views.
+This is an Obsidian vault for tracking and managing a personal wine and whiskey collection. The vault uses a structured metadata system powered by Obsidian plugins to create tasting notes, track inventory, maintain shopping lists, and visualize labels in various views.
+
+**Key Architectural Difference:**
+- **Wines**: Single note per wine with integrated product info and tasting notes
+- **Whiskeys**: Separated architecture with bottle notes (product info) and multiple tasting notes per bottle
 
 ## Architecture
 
 ### Folder Structure
 
 - `WineCellar/` - Main Obsidian vault
-  - `0_Collection/` - Collection views and queries (All wines, Cards, Fridge, Shopping Lists)
+  - `0_Collection/` - Collection views and queries (wines and whiskeys)
   - `1_Wines/` - Individual wine tasting notes (one file per wine)
-  - `8_FileClass/` - Metadata Menu FileClass definitions (Wine.md, Wine-AWS.md)
-  - `9_Templates/` - QuickAdd templates for creating new wine notes
+  - `1_Whiskeys/` - Whiskey bottles and tastings (nested structure)
+    - `BottleName/` - Folder per bottle
+      - `BottleName.md` - Bottle note with product info
+      - `Tasting-YYYY-MM-DD-TasterName.md` - Individual tasting notes
+  - `8_FileClass/` - Metadata Menu FileClass definitions (Wine.md, Whiskey.md, Tasting.md)
+  - `9_Templates/` - QuickAdd templates for creating new notes
   - `.obsidian/` - Obsidian configuration and plugins
 
 ### Core Components
@@ -89,6 +97,77 @@ dv.table([/* columns */],
 
 Interactive fields (Stars, Inventory, Buy) use `await f(dv, p, "FieldName", {options: {alwaysOn: true, showAddField: true}})` to enable inline editing.
 
+## Working with Whiskey Notes
+
+### Whiskey Architecture
+
+Whiskeys use a **separated architecture** with two FileClasses:
+- **Whiskey (Bottle)**: Product information (distiller, proof, age, price, etc.)
+- **Tasting**: Individual tasting sessions with per-taster scoring
+
+Each bottle has its own folder in `1_Whiskeys/BottleName/` containing:
+- The bottle note (`BottleName.md`)
+- Multiple tasting notes (`Tasting-YYYY-MM-DD-TasterName.md`)
+
+### Creating New Whiskey Bottles
+
+Use QuickAdd template "Whiskey Bottle" which prompts for:
+1. Distiller name
+2. Whiskey name
+3. Year
+
+File is created in `1_Whiskeys/BottleName/BottleName.md` with auto-generated filename and frontmatter.
+
+### Creating New Tastings
+
+**Recommended Method**: Use the "Add New Tasting" button on any bottle note. This:
+- Creates tasting in the correct folder automatically
+- Pre-fills LinkedBottle field
+- Prompts for: Date, Taster Name, Days from crack, Fill level
+- Opens the new tasting note for scoring and notes
+
+**Alternative**: Use QuickAdd template "Whiskey Tasting" (requires manual folder selection)
+
+### Whiskey Field Conventions
+
+**Bottle Fields:**
+- **Type**: Bourbon, Rye Whiskey, Tennessee Whiskey, etc.
+- **Proof**: Numeric (0-200, step 0.1)
+- **AgeStatement**: Age in years (not used in filename)
+- **Year**: Release year (used in filename like Vintage for wine)
+- **MashBill**: Grain composition
+- **BarrelType**: Barrel aging information
+- **BottleOpenedDate**: Date when bottle was opened
+- **Stars/ValueForMoney**: Cross-beverage comparison (same as wine)
+
+**Tasting Fields:**
+- **Date**: Tasting date
+- **TasterName**: Who tasted it
+- **DaysFromCrack**: Days since bottle was opened
+- **FillLevel**: Bottle fill percentage (0-100)
+- **Nose**: Aroma score (0-10, step 0.1)
+- **Palate**: Taste score (0-10, step 0.1)
+- **Finish**: Aftertaste score (0-10, step 0.1)
+- **Overall**: Overall impression (0-10, step 0.1)
+- **TotalScore**: Auto-calculated sum (max 40)
+
+### Whiskey Collection Views
+
+Whiskey views calculate **average scores from all tastings**:
+- Filter bottles with `p.fileClass === "Whiskey"`
+- Get tastings with `dv.pages('"1_Whiskeys/' + bottleName + '"').where(p => p.fileClass === "Tasting")`
+- Calculate averages across all tasting scores
+- Display "Avg Score" instead of individual scores
+
+### Bottle Note Features
+
+Each bottle note includes:
+- **Product Details section**: Editable metadata fields
+- **Tasting Notes Summary**: DataviewJS queries showing:
+  - Per-taster average scores (grouped by TasterName)
+  - Table of all tasting sessions with links
+- **Add New Tasting button**: Creates new tasting in one click
+
 ## Modifying the Vault
 
 ### Adding New Wine Fields
@@ -113,10 +192,24 @@ Custom CSS snippets go in `WineCellar/.obsidian/snippets/`. Current snippet:
 
 ## Git Workflow
 
-Standard git operations. Current tracked changes typically include:
-- Wine notes in `1_Wines/`
-- Collection view updates in `0_Collection/`
-- Plugin configuration changes in `.obsidian/`
-- Template modifications in `9_Templates/`
+### Framework vs Data Separation
 
-Note: Wine label images in `1_Wines/labels/` subdirectories are binary files.
+The repository uses `.gitignore` to separate framework from personal data:
+
+**Tracked (Framework):**
+- FileClass definitions (`8_FileClass/`)
+- Templates (`9_Templates/`)
+- Collection views (`0_Collection/`)
+- Plugin configurations (`.obsidian/plugins/`)
+
+**Ignored (Personal Data):**
+- Wine tasting notes (`1_Wines/`)
+- Whiskey bottles and tastings (`1_Whiskeys/`)
+
+This allows the framework to be shared publicly while keeping personal tasting data private. Users can clone the repo to get the structure without your personal collection.
+
+### Committing Changes
+
+When modifying framework files, commit as usual. Personal data in `1_Wines/` and `1_Whiskeys/` will not be staged automatically.
+
+To commit personal data for backup purposes, use `git add -f` to force-add ignored files.
