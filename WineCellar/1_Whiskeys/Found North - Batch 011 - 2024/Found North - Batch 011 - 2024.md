@@ -15,10 +15,10 @@ BottleNumber:
 Price:
 PurchaseSource:
 PurchaseLink:
-Inventory: 0
-Buy: 0
-Stars: --
-ValueForMoney:
+Inventory: 4
+Buy: 1
+Stars: ⭐️⭐️⭐️⭐️⭐️
+ValueForMoney: 9.5
 BottleOpenedDate:
 BottleImage:
 ---
