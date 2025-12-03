@@ -6,7 +6,7 @@ WhiskeyName: Stagg Jr Batch 24D
 AgeStatement: 7-9 years
 Year: "2024"
 Type: Bourbon
-MashBill: ~89.5% Corn, ~7% Rye, ~3.5% Malted Barley (BT Mashbill #1)
+MashBill: ~89.5% Corn, ~7% Rye, ~3.5% Malted Barley (BT Mashbill
 BarrelType: New Charred Oak
 Proof: 127.4
 Region-State: Frankfort, Kentucky
@@ -17,7 +17,7 @@ PurchaseSource: Geoff
 PurchaseLink:
 Inventory: 0
 Buy: 0
-Stars: --
+Stars:
 ValueForMoney:
 BottleOpenedDate:
 BottleImage:
