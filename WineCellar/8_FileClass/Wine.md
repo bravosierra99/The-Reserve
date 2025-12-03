@@ -44,10 +44,10 @@ fields:
     type: Select
     options:
       values:
-        - Red wine
-        - White wine
-        - Rose wine
-        - Champagne
+        - "Red wine"
+        - "White wine"
+        - "Rose wine"
+        - "Champagne"
     path: ""
     id: yi4Ej9
   - name: Country-Region
@@ -86,12 +86,12 @@ fields:
     type: Select
     options:
       values:
-        - --
-        - ⭐️
-        - ⭐️⭐️
-        - ⭐️⭐️⭐️
-        - ⭐️⭐️⭐️⭐️
-        - ⭐️⭐️⭐️⭐️⭐️
+        - "--"
+        - "⭐️"
+        - "⭐️⭐️"
+        - "⭐️⭐️⭐️"
+        - "⭐️⭐️⭐️⭐️"
+        - "⭐️⭐️⭐️⭐️⭐️"
     path: ""
     id: DZ1o6Z
   - name: Price
