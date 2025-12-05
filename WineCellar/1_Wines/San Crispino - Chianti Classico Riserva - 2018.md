@@ -12,7 +12,7 @@ Style:
 Price: "30"
 PurchaseSource: Arundel Preserves
 PurchaseLink:
-Stars: --
+Stars: ⭐️⭐️⭐️
 ValueForMoney:
 Points:
 Inventory: 0
