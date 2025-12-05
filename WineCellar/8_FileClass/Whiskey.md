@@ -111,6 +111,10 @@ fields:
         "6": ⭐️⭐️⭐️⭐️⭐️
     path: ""
     id: WhStar
+    command:
+      id: insert__WhStar
+      icon: list-plus
+      label: Insert Stars field
   - name: ValueForMoney
     type: Number
     options:
@@ -121,7 +125,7 @@ fields:
   - name: BottleOpenedDate
     type: Date
     options:
-      dateFormat: "YYYY-MM-DD"
+      dateFormat: YYYY-MM-DD
     path: ""
     id: WhOpen
   - name: BottleImage
@@ -133,7 +137,7 @@ fields:
       thumbnailSize: "100"
     path: ""
     id: WhBImg
-version: "3.0"
+version: "3.5"
 limit: 20
 mapWithTag: false
 icon: coffee

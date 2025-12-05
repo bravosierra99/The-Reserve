@@ -3,5 +3,6 @@
   "enabledCssSnippets": [
     "hide-properties"
   ],
-  "baseFontSize": 16
+  "baseFontSize": 16,
+  "theme": "obsidian"
 }

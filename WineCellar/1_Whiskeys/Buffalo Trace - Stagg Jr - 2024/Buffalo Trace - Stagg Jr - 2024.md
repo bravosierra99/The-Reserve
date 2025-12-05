@@ -17,7 +17,7 @@ PurchaseSource: Geoff
 PurchaseLink:
 Inventory: 0
 Buy: 0
-Stars:
+Stars: ⭐️⭐️⭐️⭐️⭐️
 ValueForMoney:
 BottleOpenedDate:
 BottleImage:
