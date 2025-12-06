@@ -1,6 +1,6 @@
 # Step-by-step Approach
 ## Start with a new vault
-The best way is to start with a new vault. I named it **"WineCellar“**, which is much more appealing than "WineFridge“. After you created it go to Settings (or Preferences at MacOS) &rarr; Options: Community plugins &rarr; Turn on community plugins &rarr; Browse and install and enable the six **plugins** Dataview, Metadata Menu, Quick Add, Paste image rename, Minimal Theme Settings, and Style Settings.
+The best way is to start with a new vault. I named it **"Cellar"**, which is much more appealing than "WineFridge". After you created it go to Settings (or Preferences at MacOS) &rarr; Options: Community plugins &rarr; Turn on community plugins &rarr; Browse and install and enable the six **plugins** Dataview, Metadata Menu, Quick Add, Paste image rename, Minimal Theme Settings, and Style Settings.
 
 Then install the Minimal **theme**: Settings &rarr; Options: Appearance &rarr; Themes &rarr; Manage. Search for "Minimal“ and click on "install and use“. 
 
@@ -330,7 +330,7 @@ sort Country-Region asc, ValueForMoney desc
 ## Final remarks
 If you want interactive tables click on the wine glass symbol next to the Wine fileClass and on "Table View“ in the heading of the fileClass note. Here you can set up different filters, arrange the order of your fields in the table and save it as a view. I don’t like how the tables look like so I use my own notes with predefined settings.
 
-**Now you are ready to go and adapt and fill your "Wine Cellar" vault. Have fun!**
+**Now you are ready to go and adapt and fill your "Cellar" vault. Have fun!**
 
 
 

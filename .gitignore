@@ -1,9 +1,9 @@
 .DS_Store
-WineCellar/.obsidian/workspace.json
-WineCellar/.obsidian/workspace-mobile.json
-WineCellar/.obsidian/hotkeys.json
-WineCellar/.obsidian/graph.json
+Cellar/.obsidian/workspace.json
+Cellar/.obsidian/workspace-mobile.json
+Cellar/.obsidian/hotkeys.json
+Cellar/.obsidian/graph.json
 
 # Ignore personal data, but track framework files
-WineCellar/1_Wines/
-WineCellar/1_Whiskeys/
+Cellar/1_Wines/
+Cellar/1_Whiskeys/

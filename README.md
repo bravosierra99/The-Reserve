@@ -36,7 +36,7 @@ Each spirit gets:
 ## Structure
 
 ```
-WineCellar/
+Cellar/
 ├── 0_Collection/          # Collection views (all bottles, cards, inventory)
 ├── 1_Wines/               # Wine bottles and tastings
 │   └── {BottleName}/
