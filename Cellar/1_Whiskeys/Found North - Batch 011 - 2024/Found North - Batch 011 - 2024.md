@@ -20,7 +20,7 @@ Buy: 1
 Stars: ⭐️⭐️⭐️⭐️⭐️
 ValueForMoney: 9.5
 BottleOpenedDate:
-BottleImage:
+Label:
 ---
 
 ## Bottle Information
@@ -237,9 +237,6 @@ form.querySelector('#create-tasting-btn').addEventListener('click', async () => 
     }
 });
 ```
-
-## Bottle Image
-BottleImage::
 
 ## Label
 Label::

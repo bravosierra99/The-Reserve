@@ -20,7 +20,7 @@ Buy: 1
 Stars: --
 ValueForMoney: 8.5
 BottleOpenedDate: 2024-11-15
-BottleImage:
+Label:
 ---
 
 ## Bottle Information
@@ -180,8 +180,6 @@ button.addEventListener('click', async () => {
 });
 ```
 
-## Bottle Image
-BottleImage::![[Holladay Distillery - Holladay Soft Red Wheat Rickhouse Proof - 2024.jpg]]
 
 ## Label
-Label::
+Label::![[Holladay Distillery - Holladay Soft Red Wheat Rickhouse Proof - 2024.jpg]]

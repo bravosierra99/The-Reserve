@@ -5,15 +5,15 @@ Winemaker: Sanvito
 WineName: Nero d'Avola
 Vintage: "2023"
 Type: Red wine
-Variety:
-Country-Region:
-Vineyard:
+Variety: Nero d'Avola
+Country-Region: Italy - Sicilia IGT
+Vineyard: Terre Siciliane
 Style:
-Price: "10"
+Price: "10.0"
 PurchaseSource:
 PurchaseLink:
-Stars: ⭐️⭐️
-ValueForMoney: -1
+Stars: --
+ValueForMoney:
 Points:
 Inventory: 0
 Buy: 0
@@ -22,6 +22,7 @@ Buy: 0
 ## Bottle Information
 
 ### Product Details
+
 
 ### Tasting Notes Summary
 
@@ -201,4 +202,4 @@ form.querySelector('#create-tasting-btn').addEventListener('click', async () => 
 ```
 
 ## Label
-Label:: ![[Sanvito - Nero d'Avola - 2023.jpg]]
+Label::[[1_Wines/Sanvito - Nero d'Avola - 2023/labels/label.jpg]]

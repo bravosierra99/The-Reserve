@@ -5,23 +5,24 @@ Winemaker: San Crispino
 WineName: Chianti Classico Riserva
 Vintage: "2018"
 Type: Red wine
-Variety: Chianti
-Country-Region:
-Vineyard:
+Variety: Sangiovese
+Country-Region: Italy - Chianti Classico DOCG
+Vineyard: San Crispino
 Style:
-Price: "30"
-PurchaseSource: Arundel Preserves
+Price: "30.0"
+PurchaseSource:
 PurchaseLink:
-Stars: ⭐️⭐️⭐️
+Stars: --
 ValueForMoney:
 Points:
 Inventory: 0
-Buy:
+Buy: 0
 ---
 
 ## Bottle Information
 
 ### Product Details
+
 
 ### Tasting Notes Summary
 
@@ -201,4 +202,4 @@ form.querySelector('#create-tasting-btn').addEventListener('click', async () => 
 ```
 
 ## Label
-Label:: ![[San Crispino - Chianti Classico Riserva - 2018.webp]]
+Label::![[1_Wines/San Crispino - Chianti Classico Riserva - 2018/labels/label.jpg]]

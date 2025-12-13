@@ -6,11 +6,11 @@ WineName: The Vinekeeper
 Vintage: "2024"
 Type: Red wine
 Variety: Cabernet Sauvignon
-Country-Region: Napa Valley
+Country-Region: United States - Napa Valley
 Vineyard: Wagner Family
 Style:
-Price: "25"
-PurchaseSource: Arundel Preserves
+Price: "25.0"
+PurchaseSource:
 PurchaseLink:
 Stars: --
 ValueForMoney:
@@ -22,6 +22,7 @@ Buy: 0
 ## Bottle Information
 
 ### Product Details
+
 
 ### Tasting Notes Summary
 
@@ -201,4 +202,4 @@ form.querySelector('#create-tasting-btn').addEventListener('click', async () => 
 ```
 
 ## Label
-Label:: ![[Bonanza - The Vinekeeper - 2024.webp]]
+Label::![[1_Wines/Bonanza - The Vinekeeper - 2024/labels/label.jpg]]
