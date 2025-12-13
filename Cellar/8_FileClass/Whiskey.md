@@ -111,10 +111,6 @@ fields:
         "6": ⭐️⭐️⭐️⭐️⭐️
     path: ""
     id: WhStar
-    command:
-      id: insert__WhStar
-      icon: list-plus
-      label: Insert Stars field
   - name: ValueForMoney
     type: Number
     options:
@@ -125,10 +121,10 @@ fields:
   - name: BottleOpenedDate
     type: Date
     options:
-      dateFormat: YYYY-MM-DD
+      dateFormat: "YYYY-MM-DD"
     path: ""
     id: WhOpen
-  - name: BottleImage
+  - name: Label
     type: Media
     options:
       embed: false
@@ -136,8 +132,13 @@ fields:
       display: card
       thumbnailSize: "100"
     path: ""
+<<<<<<< Updated upstream:WineCellar/8_FileClass/Whiskey.md
     id: WhBImg
+version: "3.0"
+=======
+    id: WhLabl
 version: "3.5"
+>>>>>>> Stashed changes:Cellar/8_FileClass/Whiskey.md
 limit: 20
 mapWithTag: false
 icon: coffee
@@ -149,7 +150,7 @@ extends:
 savedViews: []
 favoriteView:
 fieldsOrder:
-  - WhBImg
+  - WhLabl
   - WhPric
   - WhStar
   - WhValu
