@@ -1,6 +1,6 @@
 # Step-by-step Approach
 ## Start with a new vault
-The best way is to start with a new vault. I named it **"WineCellar“**, which is much more appealing than "WineFridge“. After you created it go to Settings (or Preferences at MacOS) &rarr; Options: Community plugins &rarr; Turn on community plugins &rarr; Browse and install and enable the six **plugins** Dataview, Metadata Menu, Quick Add, Paste image rename, Minimal Theme Settings, and Style Settings.
+The best way is to start with a new vault. I named it **"Cellar“**, which is much more appealing than "WineFridge“. After you created it go to Settings (or Preferences at MacOS) &rarr; Options: Community plugins &rarr; Turn on community plugins &rarr; Browse and install and enable the six **plugins** Dataview, Metadata Menu, Quick Add, Paste image rename, Minimal Theme Settings, and Style Settings.
 
 Then install the Minimal **theme**: Settings &rarr; Options: Appearance &rarr; Themes &rarr; Manage. Search for "Minimal“ and click on "install and use“. 
 

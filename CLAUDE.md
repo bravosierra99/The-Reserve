@@ -14,7 +14,7 @@ This is an Obsidian vault for tracking and managing a personal wine and whiskey 
 
 ### Folder Structure
 
-- `WineCellar/` - Main Obsidian vault
+- `Cellar/` - Main Obsidian vault
   - `0_Collection/` - Collection views and queries (wines and whiskeys)
   - `1_Wines/` - Individual wine tasting notes (one file per wine)
   - `1_Whiskeys/` - Whiskey bottles and tastings (nested structure)
@@ -172,9 +172,9 @@ Each bottle note includes:
 
 ### Adding New Wine Fields
 
-1. Edit FileClass definition in `WineCellar/8_FileClass/Wine.md` (or Wine-AWS.md)
+1. Edit FileClass definition in `Cellar/8_FileClass/Wine.md` (or Wine-AWS.md)
 2. Add field configuration in the `fields:` array frontmatter
-3. Update template in `WineCellar/9_Templates/Tasting Note.md`
+3. Update template in `Cellar/9_Templates/Tasting Note.md`
 4. Update relevant Dataview queries in `0_Collection/` views
 
 ### Adding New Collection Views
@@ -187,7 +187,7 @@ Create new `.md` file in `0_Collection/` with Dataview or DataviewJS query. Foll
 
 ### CSS Customization
 
-Custom CSS snippets go in `WineCellar/.obsidian/snippets/`. Current snippet:
+Custom CSS snippets go in `Cellar/.obsidian/snippets/`. Current snippet:
 - `hide-properties.css` - Hides frontmatter in reading view for card displays
 
 ## Git Workflow

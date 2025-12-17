@@ -40,6 +40,16 @@ backup_bottles() {
     if [ "$current_branch" != "tastings-backup" ]; then
         echo -e "${BLUE}Switching to tastings-backup branch${NC}"
         if [ "$dry_run" = false ]; then
+            # If there are uncommitted changes, commit them on current branch first
+            if ! git diff --quiet || ! git diff --cached --quiet; then
+                echo -e "${YELLOW}Committing remaining changes on $current_branch before switching...${NC}"
+                git add -A
+                git reset Cellar/1_Wines/ Cellar/1_Whiskeys/ 2>/dev/null || true
+                if ! git diff --cached --quiet; then
+                    TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
+                    git commit -m "Framework changes - $TIMESTAMP"
+                fi
+            fi
             git checkout tastings-backup
         fi
     fi
@@ -50,8 +60,8 @@ backup_bottles() {
     echo "  - Cellar/1_Whiskeys/"
 
     if [ "$dry_run" = false ]; then
-        # Stage ONLY bottle and tasting files
-        git add Cellar/1_Wines/ Cellar/1_Whiskeys/ 2>/dev/null || true
+        # Stage ONLY bottle and tasting files (force add since they're in .gitignore)
+        git add -f Cellar/1_Wines/ Cellar/1_Whiskeys/ 2>/dev/null || true
     fi
 
     # Check if there are changes
@@ -92,6 +102,16 @@ backup_framework() {
     if [ "$current_branch" != "main" ]; then
         echo -e "${BLUE}Switching to main branch${NC}"
         if [ "$dry_run" = false ]; then
+            # If there are uncommitted changes, commit them on current branch first
+            if ! git diff --quiet || ! git diff --cached --quiet; then
+                echo -e "${YELLOW}Committing remaining changes on $current_branch before switching...${NC}"
+                git add -A
+                git reset Cellar/1_Wines/ Cellar/1_Whiskeys/ 2>/dev/null || true
+                if ! git diff --cached --quiet; then
+                    TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
+                    git commit -m "Framework changes - $TIMESTAMP"
+                fi
+            fi
             git checkout main
         fi
     fi
@@ -103,38 +123,48 @@ backup_framework() {
     echo "  - Cellar/8_FileClass/"
     echo "  - Cellar/9_Templates/"
     echo "  - Cellar/0_Collection/"
-    echo "  - Cellar/WineCellar/"
-    echo "  - .claude/"
     echo "  - backup.sh"
 
     if [ "$dry_run" = false ]; then
-        # Stage ALL changes first
-        git add -A
-
-        # Then unstage bottle content
-        git reset Cellar/1_Wines/ Cellar/1_Whiskeys/ 2>/dev/null || true
-    fi
-
-    # Check if there are changes
-    if [ "$dry_run" = false ]; then
-        if git diff --cached --quiet; then
-            echo -e "\n${GREEN}No changes to framework${NC}"
+        # Check if there are framework changes to bring from tastings-backup
+        if git diff --quiet main...$current_branch -- . ":(exclude)Cellar/1_Wines" ":(exclude)Cellar/1_Whiskeys"; then
+            echo -e "\n${GREEN}No framework changes to sync from $current_branch${NC}"
             return
         fi
+
+        # Copy framework files from tastings-backup (excluding bottles)
+        echo -e "\n${BLUE}Syncing framework changes from $current_branch...${NC}"
+        git checkout $current_branch -- Cellar/.obsidian/ Cellar/8_FileClass/ Cellar/9_Templates/ Cellar/0_Collection/ 2>/dev/null || true
+        git checkout $current_branch -- *.md backup.sh .gitignore 2>/dev/null || true
 
         # Show what's being committed
         echo -e "\n${BLUE}Changes to commit:${NC}"
         git diff --cached --stat
 
-        # Commit with timestamp
-        TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
-        git commit -m "Update framework - $TIMESTAMP"
-        echo -e "\n${GREEN}✓ Committed framework changes${NC}"
+        # Only commit if there are changes
+        if ! git diff --cached --quiet; then
+            # Commit with timestamp
+            TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
+            git commit -m "Update framework - $TIMESTAMP"
+            echo -e "\n${GREEN}✓ Committed framework changes${NC}"
+        else
+            echo -e "\n${GREEN}No changes to commit${NC}"
+            return
+        fi
 
         # Push to remote
         echo -e "\n${YELLOW}Pushing to remote...${NC}"
         git push origin main
         echo -e "${GREEN}✓ Pushed to origin/main${NC}"
+
+        # Switch back to original branch and merge main to keep in sync
+        if [ "$current_branch" != "main" ]; then
+            echo -e "\n${BLUE}Switching back to $current_branch...${NC}"
+            git checkout $current_branch
+            echo -e "${BLUE}Merging main to keep branches in sync...${NC}"
+            git merge main -m "Sync framework updates from main"
+            echo -e "${GREEN}✓ Merged framework updates${NC}"
+        fi
     else
         # Dry run: show what would be committed
         # Temporarily stage to show diff, then unstage
@@ -160,11 +190,14 @@ show_status() {
     # Show uncommitted changes by category
     echo -e "${BLUE}Uncommitted changes:${NC}\n"
 
-    # Check bottles
-    if ! git diff --quiet Cellar/1_Wines/ Cellar/1_Whiskeys/ 2>/dev/null; then
-        echo -e "${YELLOW}Bottles/Tastings (goes to tastings-backup):${NC}"
-        git status --short Cellar/1_Wines/ Cellar/1_Whiskeys/ 2>/dev/null | head -10
-        echo ""
+    # Check bottles (use --ignored to see changes in .gitignore directories)
+    if [ -d "Cellar/1_Wines" ] || [ -d "Cellar/1_Whiskeys" ]; then
+        # Check if there are any files in these directories
+        if [ "$(find Cellar/1_Wines Cellar/1_Whiskeys -type f 2>/dev/null | wc -l)" -gt 0 ]; then
+            echo -e "${YELLOW}Bottles/Tastings (goes to tastings-backup):${NC}"
+            echo "  $(find Cellar/1_Wines Cellar/1_Whiskeys -type f 2>/dev/null | wc -l) files in bottle directories"
+            echo ""
+        fi
     fi
 
     # Check framework

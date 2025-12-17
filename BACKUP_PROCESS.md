@@ -5,7 +5,7 @@ The repository uses two branches:
 - **main**: Contains only the framework (templates, scripts, structure) - no personal data
 - **tastings-backup**: Contains personal tastings and data files
 
-The `.gitignore` excludes `WineCellar/1_Wines/` and `WineCellar/1_Whiskeys/` from the main branch.
+The `.gitignore` excludes `Cellar/1_Wines/` and `Cellar/1_Whiskeys/` from the main branch.
 
 ## How to Backup Tastings (ALWAYS OVERWRITE, NO HISTORY)
 
@@ -20,7 +20,7 @@ This process backs up the current state of all tastings, overwriting the previou
 
 2. **Force add ignored directories:**
    ```bash
-   git add -f WineCellar/1_Wines/ WineCellar/1_Whiskeys/
+   git add -f Cellar/1_Wines/ Cellar/1_Whiskeys/
    ```
 
 3. **Amend the previous commit (overwrites, no new history):**
@@ -40,7 +40,7 @@ This process backs up the current state of all tastings, overwriting the previou
    ```
 
 ### What Gets Backed Up
-- All tasting notes in `WineCellar/1_Wines/` and `WineCellar/1_Whiskeys/`
+- All tasting notes in `Cellar/1_Wines/` and `Cellar/1_Whiskeys/`
 - Bottle images and labels
 - Any personal data in those directories
 
