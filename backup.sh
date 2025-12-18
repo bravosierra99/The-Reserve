@@ -44,6 +44,18 @@ backup_bottles() {
         fi
     fi
 
+    # Merge main into tastings-backup to get framework updates
+    if [ "$dry_run" = false ]; then
+        echo -e "${BLUE}Syncing framework changes from main...${NC}"
+        # Only merge if there are differences
+        if ! git diff --quiet tastings-backup...main; then
+            git merge main --no-edit -m "Sync framework updates from main"
+            echo -e "${GREEN}✓ Merged main into tastings-backup${NC}"
+        else
+            echo -e "${GREEN}Already up to date with main${NC}"
+        fi
+    fi
+
     # Show what would be added
     echo -e "\n${BLUE}Files to stage:${NC}"
     echo "  - Cellar/1_Wines/"
