@@ -2,27 +2,48 @@
 ```dataviewjs
 const {fieldModifier: f} = this.app.plugins.plugins["metadata-menu"].api;
 
-const pages = dv.pages('"1_Wines"')
-	.filter(p => p.Type === "White wine")
-	.sort((a, b) => (b["ValueForMoney"] ?? 0) - (a["ValueForMoney"] ?? 0)); // Descending
+// Helper function to get average 100pt score from tastings
+function getAverageScore(dv, bottleName) {
+	const tastings = dv.pages('"1_Wines/' + bottleName + '"')
+		.where(p => p.fileClass === "Wine Tasting")
+		.array();
+	if (tastings.length === 0) return "-";
+	const total = tastings.reduce((sum, t) => sum + (t["100pt Scale"] ?? 0), 0);
+	return (total / tastings.length).toFixed(0);
+}
 
-dv.table(["Label","Wine","Winemaker", "Name", "Variety", "Vintage", "Country-Region", "Stars", "Value for Money", "Inventory", "Purchase Source", "Price", "Buy"],
-await Promise.all(pages.map(async p => [
-	p.Label,
-	p.file.link, 
-	p.Winemaker,
-	p.WineName,
-	p.Variety,
-	p.Vintage,
-	p["Country-Region"],
-	await f(dv, p, "Stars", {options: {showAddField: true}}),
-	p.ValueForMoney,
-	await f(dv, p, "Inventory", {options: {alwaysOn: true, showAddField: true}}),
-	p.PurchaseSource,
-	p.Price,
-	await f(dv, p, "Buy", {options: {alwaysOn: true, showAddField: true}})
-	])
-))
+const pages = dv.pages('"1_Wines"')
+	.filter(p => p.Type === "White wine");
+
+// Create rows with calculated scores
+const rows = await Promise.all(pages.map(async p => {
+	const avgScore = getAverageScore(dv, p.file.name);
+	return [
+		p.Label,
+		p.file.link,
+		p.Winemaker,
+		p.WineName,
+		p.Variety,
+		p.Vintage,
+		p["Country-Region"],
+		await f(dv, p, "Stars", {options: {showAddField: true}}),
+		avgScore,
+		p.ValueForMoney,
+		await f(dv, p, "Inventory", {options: {alwaysOn: true, showAddField: true}}),
+		p.PurchaseSource,
+		p.Price,
+		await f(dv, p, "Buy", {options: {alwaysOn: true, showAddField: true}})
+	];
+}));
+
+// Sort by average score (descending)
+rows.sort((a, b) => {
+	const scoreA = a[8] === "-" ? 0 : parseFloat(a[8]);
+	const scoreB = b[8] === "-" ? 0 : parseFloat(b[8]);
+	return scoreB - scoreA;
+});
+
+dv.table(["Label","Wine","Winemaker", "Name", "Variety", "Vintage", "Country-Region", "Stars", "Avg Score", "Value for Money", "Inventory", "Purchase Source", "Price", "Buy"], rows);
 
 ```
 
@@ -31,27 +52,47 @@ await Promise.all(pages.map(async p => [
 ```dataviewjs
 const {fieldModifier: f} = this.app.plugins.plugins["metadata-menu"].api;
 
-const pages = dv.pages('"1_Wines"')
-	.filter(p => p.Type === "Red wine")
-	.sort((a, b) => (b["ValueForMoney"] ?? 0) - (a["ValueForMoney"] ?? 0)); // Descending
+// Helper function to get average 100pt score from tastings
+function getAverageScore(dv, bottleName) {
+	const tastings = dv.pages('"1_Wines/' + bottleName + '"')
+		.where(p => p.fileClass === "Wine Tasting")
+		.array();
+	if (tastings.length === 0) return "-";
+	const total = tastings.reduce((sum, t) => sum + (t["100pt Scale"] ?? 0), 0);
+	return (total / tastings.length).toFixed(0);
+}
 
-dv.table(["Label","Wine","Winemaker", "Name", "Variety", "Vintage", "Country-Region", "Stars","Total Score", "Value for Money", "Inventory", "Purchase Source", "Price", "Buy"],
-await Promise.all(pages.map(async p => [
-	p.Label,
-	p.file.link, 
-	p.Winemaker,
-	p.WineName,
-	p.Variety,
-	p.Vintage,
-	p["Country-Region"],
-	await f(dv, p, "Stars", {options: {showAddField: true}}),
-	p["Total Score"],
-	p.ValueForMoney,
-	await f(dv, p, "Inventory", {options: {alwaysOn: true, showAddField: true}}),
-	p.PurchaseSource,
-	p.Price,
-	await f(dv, p, "Buy", {options: {alwaysOn: true, showAddField: true}})
-	])
-))
+const pages = dv.pages('"1_Wines"')
+	.filter(p => p.Type === "Red wine");
+
+// Create rows with calculated scores
+const rows = await Promise.all(pages.map(async p => {
+	const avgScore = getAverageScore(dv, p.file.name);
+	return [
+		p.Label,
+		p.file.link,
+		p.Winemaker,
+		p.WineName,
+		p.Variety,
+		p.Vintage,
+		p["Country-Region"],
+		await f(dv, p, "Stars", {options: {showAddField: true}}),
+		avgScore,
+		p.ValueForMoney,
+		await f(dv, p, "Inventory", {options: {alwaysOn: true, showAddField: true}}),
+		p.PurchaseSource,
+		p.Price,
+		await f(dv, p, "Buy", {options: {alwaysOn: true, showAddField: true}})
+	];
+}));
+
+// Sort by average score (descending)
+rows.sort((a, b) => {
+	const scoreA = a[8] === "-" ? 0 : parseFloat(a[8]);
+	const scoreB = b[8] === "-" ? 0 : parseFloat(b[8]);
+	return scoreB - scoreA;
+});
+
+dv.table(["Label","Wine","Winemaker", "Name", "Variety", "Vintage", "Country-Region", "Stars", "Avg Score", "Value for Money", "Inventory", "Purchase Source", "Price", "Buy"], rows);
 
 ```
