@@ -182,4 +182,4 @@ button.addEventListener('click', async () => {
 
 
 ## Label
-Label::![[Holladay Distillery - Holladay Soft Red Wheat Rickhouse Proof - 2024.jpg]]
+Label::![[labels/label.jpg]]

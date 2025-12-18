@@ -1,14 +1,17 @@
 ---
-fileClass: Tasting
-Date: 2025-12-13
-TasterName: Ben
+fileClass: Wine Tasting
+Date: "2025-12-13"
+TasterName: "Ben"
 Appearance: 3.0
 Aroma: 5.5
 Taste: 4.0
 Aftertaste: 1.0
 Overall: 1.0
 TotalScore: 14.5
-LinkedBottle: "[[Castello di Ama - Chianti Classico - 2021]]"Place: Home---
+100pt Scale: 86.25
+LinkedBottle: "[[Castello di Ama - Chianti Classico - 2021]]"
+Place: Home
+---
 
 ## Tasting Notes
 
