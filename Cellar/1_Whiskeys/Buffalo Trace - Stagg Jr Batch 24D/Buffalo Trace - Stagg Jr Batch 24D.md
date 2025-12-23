@@ -10,17 +10,17 @@ MashBill: Buffalo Trace Mash #1 (speculated: ~82% Corn, ~8% Rye, ~10% Barley)
 BarrelType: New Charred Oak
 Proof: 127.4
 Region-State: Kentucky
-BatchNumber:
-BottleNumber:
+BatchNumber: 
+BottleNumber: 
 Price: "150.0"
-PurchaseSource:
-PurchaseLink:
+PurchaseSource: 
+PurchaseLink: 
 Inventory: 0
 Buy: 0
 Stars: ⭐️⭐️⭐️⭐️
-ValueForMoney:
-BottleOpenedDate:
-BottleImage:
+ValueForMoney: 
+BottleOpenedDate: 
+BottleImage: 
 ---
 
 ## Bottle Information

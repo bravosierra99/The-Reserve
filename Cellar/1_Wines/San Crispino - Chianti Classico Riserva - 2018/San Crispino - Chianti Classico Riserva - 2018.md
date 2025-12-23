@@ -8,15 +8,16 @@ Type: Red wine
 Variety: Sangiovese
 Country-Region: Italy - Chianti Classico DOCG
 Vineyard: San Crispino
-Style:
+Style: 
 Price: "30.0"
-PurchaseSource:
-PurchaseLink:
+PurchaseSource: 
+PurchaseLink: 
 Stars: --
-ValueForMoney:
-Points:
+ValueForMoney: 
+Points: 
 Inventory: 0
 Buy: 0
+ABV: 14.5
 ---
 
 ## Bottle Information
@@ -202,4 +203,4 @@ form.querySelector('#create-tasting-btn').addEventListener('click', async () => 
 ```
 
 ## Label
-Label::![[1_Wines/San Crispino - Chianti Classico Riserva - 2018/labels/label.jpg]]
+Label:: ![[1_Wines/San Crispino - Chianti Classico Riserva - 2018/labels/label.jpg]]

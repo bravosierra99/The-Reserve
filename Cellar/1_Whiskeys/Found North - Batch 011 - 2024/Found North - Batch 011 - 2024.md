@@ -3,7 +3,7 @@ fileClass: Whiskey
 Name: Found North - Batch 011 - 2024
 Distiller: Found North
 WhiskeyName: Batch 011
-AgeStatement: 18 years
+AgeStatement: 18
 Year: "2024"
 Type: Canadian Whisky (Blended)
 MashBill: 91% Corn, 8% Rye, 1% Malted Barley
@@ -11,16 +11,16 @@ BarrelType: New American Oak and Ex-Bourbon
 Proof: 129.8
 Region-State: Distilled in Canada, Aged in Canada/US, Bottled in New Hampshire
 BatchNumber: "011"
-BottleNumber:
-Price:
-PurchaseSource:
-PurchaseLink:
+BottleNumber: 
+Price: 
+PurchaseSource: 
+PurchaseLink: 
 Inventory: 4
 Buy: 1
 Stars: ⭐️⭐️⭐️⭐️⭐️
 ValueForMoney: 9.5
-BottleOpenedDate:
-Label:
+BottleOpenedDate: 
+Label: 
 ---
 
 ## Bottle Information
@@ -239,4 +239,4 @@ form.querySelector('#create-tasting-btn').addEventListener('click', async () => 
 ```
 
 ## Label
-Label::
+Label:: ![[1_Wines/Jax Vineyards - Y3 Taureau - 2022/labels/label.jpg]]

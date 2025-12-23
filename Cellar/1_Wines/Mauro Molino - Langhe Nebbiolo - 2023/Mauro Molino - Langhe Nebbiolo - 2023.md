@@ -8,15 +8,16 @@ Type: Red wine
 Variety: Nebbiolo
 Country-Region: Italy - Langhe DOC
 Vineyard: Guarene, Roero
-Style:
+Style: 
 Price: "21.99"
 PurchaseSource: City Wine Merchant
-PurchaseLink:
+PurchaseLink: 
 Stars: --
-ValueForMoney:
-Points:
+ValueForMoney: 
+Points: 
 Inventory: 0
 Buy: 0
+ABV: 14.5
 ---
 
 ## Bottle Information
@@ -202,4 +203,4 @@ form.querySelector('#create-tasting-btn').addEventListener('click', async () => 
 ```
 
 ## Label
-Label::
+Label:: ![[1_Wines/Mauro Molino - Langhe Nebbiolo - 2023/labels/label.jpg]]

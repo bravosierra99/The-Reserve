@@ -1,22 +1,23 @@
 ---
 fileClass: Wine
-Name: Castello di Ama - Ama - 2021
-Winemaker: Castello di Arna
+Name: "Castello di Ama - Chianti Classico - 2021"
+Winemaker: Castello di Ama
 WineName: Chianti Classico
 Vintage: "2021"
 Type: Red wine
 Variety: Sangiovese
 Country-Region: Italy - Chianti Classico
 Vineyard: Castello di Ama
-Style:
+Style: 
 Price: "29.99"
-PurchaseSource:
-PurchaseLink:
+PurchaseSource: 
+PurchaseLink: 
 Stars: --
-ValueForMoney:
-Points:
+ValueForMoney: 
+Points: 
 Inventory: 0
 Buy: 0
+ABV: 14.5
 ---
 
 ## Bottle Information
@@ -202,4 +203,4 @@ form.querySelector('#create-tasting-btn').addEventListener('click', async () => 
 ```
 
 ## Label
-Label::![[1_Wines/Castello di Ama - Chianti Classico - 2021/labels/label.jpg]]
+Label:: ![[1_Wines/Castello di Ama - Chianti Classico - 2021/labels/label.jpg]]

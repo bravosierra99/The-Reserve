@@ -8,15 +8,16 @@ Type: Red wine
 Variety: Pinot Noir
 Country-Region: United States - California
 Vineyard: MISSING
-Style:
+Style: 
 Price: "39.99"
-PurchaseSource:
-PurchaseLink:
+PurchaseSource: 
+PurchaseLink: 
 Stars: --
-ValueForMoney:
-Points:
+ValueForMoney: 
+Points: 
 Inventory: 0
 Buy: 0
+ABV: 14.5
 ---
 
 ## Bottle Information

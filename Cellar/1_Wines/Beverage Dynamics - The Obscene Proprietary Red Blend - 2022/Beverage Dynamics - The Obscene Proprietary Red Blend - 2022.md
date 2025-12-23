@@ -8,15 +8,16 @@ Type: Red wine
 Variety: Zinfandel
 Country-Region: United States - Napa Valley, Napa County, California
 Vineyard: Peake Ranch
-Style:
+Style: 
 Price: "38.99"
-PurchaseSource:
-PurchaseLink:
+PurchaseSource: 
+PurchaseLink: 
 Stars: --
-ValueForMoney:
-Points:
+ValueForMoney: 
+Points: 
 Inventory: 0
 Buy: 0
+ABV: 14.5
 ---
 
 ## Bottle Information

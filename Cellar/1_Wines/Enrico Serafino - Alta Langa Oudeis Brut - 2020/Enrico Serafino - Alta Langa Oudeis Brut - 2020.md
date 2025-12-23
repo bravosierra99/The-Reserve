@@ -8,16 +8,17 @@ Type: Sparkling
 Variety: 80% Pinot Nero, 20% Chardonnay
 Country-Region: Italy - Alta Langa DOCG
 Vineyard: Oudeis
-Style:
+Style: 
 Price: 26.99
 PurchaseSource: City Wine Merchant
-PurchaseLink:
-Stars:
-ValueForMoney:
-Points:
+PurchaseLink: 
+Stars: 
+ValueForMoney: 
+Points: 
 Inventory: 0
 Buy: 0
 Label: labels/label.jpg
+ABV: 12.5
 ---
 
 ## Bottle Information
@@ -203,4 +204,4 @@ form.querySelector('#create-tasting-btn').addEventListener('click', async () => 
 ```
 
 ## Label
-Label::
+Label:: ![[1_Wines/Enrico Serafino - Alta Langa Oudeis Brut - 2020/labels/label.jpg]]

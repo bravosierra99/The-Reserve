@@ -8,16 +8,17 @@ Type: White wine
 Variety: Chardonnay
 Country-Region: United States - Sta. Rita Hills
 Vineyard: Domaine de la Côte
-Style:
+Style: 
 Price: 32.99
 PurchaseSource: City Wine Merchant
-PurchaseLink:
-Stars:
-ValueForMoney:
-Points:
+PurchaseLink: 
+Stars: 
+ValueForMoney: 
+Points: 
 Inventory: 0
 Buy: 0
 Label: labels/label.jpg
+ABV: 12.9
 ---
 
 ## Bottle Information
@@ -203,4 +204,4 @@ form.querySelector('#create-tasting-btn').addEventListener('click', async () => 
 ```
 
 ## Label
-Label::![[1_Wines/Sandhi - Chardonnay Sta. Rita Hills - 2022/labels/label.jpg]]
+Label:: ![[1_Wines/Sandhi - Chardonnay Sta. Rita Hills - 2022/labels/label.jpg]]

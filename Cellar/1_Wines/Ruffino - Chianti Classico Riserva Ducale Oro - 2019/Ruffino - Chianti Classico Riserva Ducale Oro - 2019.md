@@ -5,9 +5,9 @@ Winemaker: Ruffino
 WineName: "Chianti Classico Riserva Ducale Oro"
 Vintage: 2019
 Type: "Red wine"
-Variety: "Sangiovese, Merlot, Cabernet Sauvignon, Colorino"
+Variety: Sangiovese, Merlot, Cabernet Sauvignon
 Country-Region: "Italy - Chianti Classico DOCG"
-Vineyard: "Castellina in Chianti"
+Vineyard: Gretole estate, Castellina in Chianti
 Style: 
 Price: 40.0
 PurchaseSource: 
@@ -18,6 +18,7 @@ Points:
 Inventory: 0
 Buy: 0
 Label: labels/label.jpg
+ABV: 15
 ---
 
 ## Bottle Information
@@ -203,4 +204,4 @@ form.querySelector('#create-tasting-btn').addEventListener('click', async () => 
 ```
 
 ## Label
-Label::
+Label:: ![[1_Wines/Ruffino - Chianti Classico Riserva Ducale Oro - 2019/labels/label.jpg]]
