@@ -1,1 +1,0 @@
-../automation/dual-branch-backup.sh
