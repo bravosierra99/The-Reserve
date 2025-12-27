@@ -145,11 +145,11 @@ File is created in `1_Whiskeys/BottleName/BottleName.md` with auto-generated fil
 - **TasterName**: Who tasted it
 - **DaysFromCrack**: Days since bottle was opened
 - **FillLevel**: Bottle fill percentage (0-100)
-- **Nose**: Aroma score (0-10, step 0.1)
-- **Palate**: Taste score (0-10, step 0.1)
-- **Finish**: Aftertaste score (0-10, step 0.1)
-- **Overall**: Overall impression (0-10, step 0.1)
-- **TotalScore**: Auto-calculated sum (max 40)
+- **Nose**: Aroma score (0-3, step 0.1)
+- **Palate**: Taste score (0-3, step 0.1)
+- **Finish**: Aftertaste score (0-3, step 0.1)
+- **Overall**: Overall impression (0-1, step 0.05)
+- **TotalScore**: Auto-calculated sum (max 10)
 
 ### Whiskey Collection Views
 
