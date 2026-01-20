@@ -3,7 +3,7 @@ fileClass: Whiskey
 Name: Holladay Distillery - Holladay Soft Red Wheat Rickhouse Proof - 2024
 Distiller: Holladay Distillery
 WhiskeyName: Holladay Soft Red Wheat Rickhouse Proof
-AgeStatement: "6+ years"
+AgeStatement: 6+ years
 Year: "2024"
 Type: Wheated Bourbon
 MashBill: 73% Corn, 15% Wheat, 12% Barley
@@ -18,7 +18,7 @@ PurchaseLink:
 Inventory: 0
 Buy: 1
 Stars: --
-ValueForMoney: 8.5
+ValueForMoney: 4.8
 BottleOpenedDate: 2024-11-15
 Label:
 ---
