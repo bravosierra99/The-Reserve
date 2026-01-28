@@ -11,16 +11,16 @@ BarrelType: New American Oak and Ex-Bourbon
 Proof: 129.8
 Region-State: Distilled in Canada, Aged in Canada/US, Bottled in New Hampshire
 BatchNumber: "011"
-BottleNumber:
-Price:
-PurchaseSource:
-PurchaseLink:
+BottleNumber: 
+Price: 
+PurchaseSource: 
+PurchaseLink: 
 Inventory: 4
 Buy: 1
 Stars: ⭐️⭐️⭐️⭐️⭐️
 ValueForMoney: 5
-BottleOpenedDate:
-Label:
+BottleOpenedDate: 
+Label: 
 ---
 
 ## Bottle Information
