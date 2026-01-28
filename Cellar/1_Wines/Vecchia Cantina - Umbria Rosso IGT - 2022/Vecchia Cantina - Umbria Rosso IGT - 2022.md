@@ -1,29 +1,28 @@
 ---
 fileClass: Wine
-Name: "Lloyd Cellars - Pinot Noir Sta. Rita Hills - 2022"
-Winemaker: Lloyd Cellars
-WineName: Pinot Noir Sta. Rita Hills
+Name: Vecchia Cantina - Umbria Rosso IGT - 2022
+Winemaker: Vecchia Cantina
+WineName: Umbria Rosso IGT
 Vintage: "2022"
 Type: Red wine
-Variety: Pinot Noir
-Country-Region: United States - Santa Barbara County, Central Coast
-Vineyard: Multiple vineyards in Sta. Rita Hills
-Style: 
-Price: "72.99"
+Variety: Sagrantino, Sangiovese, Merlot
+Country-Region: Italy - Umbria
+Vineyard: Vecchia Cantina Estate
+ABV: 14.5
+Style:
+Price: 
 PurchaseSource: 
-PurchaseLink: 
+PurchaseLink:
 Stars: --
-ValueForMoney: 
-Points: 
+ValueForMoney:
+Points:
 Inventory: 0
 Buy: 0
-ABV: 13.8
 ---
 
 ## Bottle Information
 
 ### Product Details
-
 
 ### Tasting Notes Summary
 
@@ -104,7 +103,6 @@ if (tastings.length === 0) {
     );
 }
 ```
-
 ### Create New Tasting
 
 ```dataviewjs
@@ -201,6 +199,5 @@ form.querySelector('#create-tasting-btn').addEventListener('click', async () => 
     }
 });
 ```
-
 ## Label
-Label:: ![[1_Wines/Lloyd Cellars - Pinot Noir Sta. Rita Hills - 2022/labels/label.jpg]]
+Label:: ![[labels/label.jpg]]

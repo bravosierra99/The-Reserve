@@ -25,7 +25,7 @@ Buy: 0
 ## Bottle Information
 
 ### Product Details
-
+Lost tastings, we thought this was an amazing table wine.
 
 ### Tasting Notes Summary
 

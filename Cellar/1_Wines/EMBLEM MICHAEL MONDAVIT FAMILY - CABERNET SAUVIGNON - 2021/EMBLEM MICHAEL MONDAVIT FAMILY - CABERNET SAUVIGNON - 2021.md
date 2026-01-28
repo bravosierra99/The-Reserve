@@ -1,29 +1,28 @@
 ---
 fileClass: Wine
-Name: "Lloyd Cellars - Pinot Noir Sta. Rita Hills - 2022"
-Winemaker: Lloyd Cellars
-WineName: Pinot Noir Sta. Rita Hills
-Vintage: "2022"
-Type: Red wine
-Variety: Pinot Noir
-Country-Region: United States - Santa Barbara County, Central Coast
-Vineyard: Multiple vineyards in Sta. Rita Hills
-Style: 
-Price: "72.99"
+Name: EMBLEM MICHAEL MONDAVIT FAMILY - CABERNET SAUVIGNON - 2021
+Winemaker: EMBLEM MICHAEL MONDAVIT FAMILY
+WineName: CABERNET SAUVIGNON
+Vintage: "2021"
+Type: Cabernet Sauvignon
+Variety: Cabernet Sauvignon
+Country-Region: NAPA VALLEY
+Vineyard: 
+ABV: 
+Style:
+Price: 
 PurchaseSource: 
-PurchaseLink: 
+PurchaseLink:
 Stars: --
-ValueForMoney: 
-Points: 
+ValueForMoney:
+Points:
 Inventory: 0
 Buy: 0
-ABV: 13.8
 ---
 
 ## Bottle Information
 
 ### Product Details
-
 
 ### Tasting Notes Summary
 
@@ -104,7 +103,6 @@ if (tastings.length === 0) {
     );
 }
 ```
-
 ### Create New Tasting
 
 ```dataviewjs
@@ -201,6 +199,5 @@ form.querySelector('#create-tasting-btn').addEventListener('click', async () => 
     }
 });
 ```
-
 ## Label
-Label:: ![[1_Wines/Lloyd Cellars - Pinot Noir Sta. Rita Hills - 2022/labels/label.jpg]]
+Label:: ![[labels/label.jpg]]
