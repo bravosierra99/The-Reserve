@@ -9,13 +9,13 @@ Variety: Fiano
 Country-Region: Italy - Campania
 Vineyard: Summonte
 ABV: 13.5
-Style:
+Style: 
 Price: 
 PurchaseSource: City wine merchant
-PurchaseLink:
+PurchaseLink: 
 Stars: --
-ValueForMoney:
-Points:
+ValueForMoney: 
+Points: 
 Inventory: 1
 Buy: 0
 ---
