@@ -1,14 +1,14 @@
 ---
 fileClass: Tasting
-Date: "2026-02-02"
-TasterName: "Ben"
+Date: 2026-02-02
+TasterName: Ben
 DaysFromCrack: 0
 FillLevel: 100
 Nose: 2.1
 Palate: 2.1
 Finish: 1.9
 Overall: 0.6
-TotalScore: 
+TotalScore: 6.699999999999999
 LinkedBottle: "[[Buffalo Trace Distillery - Stagg batch 25d]]"
 ---
 
