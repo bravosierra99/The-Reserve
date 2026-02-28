@@ -10,17 +10,17 @@ MashBill: 99% corn and 1% malted barley
 BarrelType: Double oaked in new toasted oak barrels of varying char levels
 Proof: 117.8
 Region-State: Louisville, Kentucky
-BatchNumber:
-BottleNumber:
+BatchNumber: 
+BottleNumber: 
 Price: 
 PurchaseSource: 
-PurchaseLink:
+PurchaseLink: 
 Inventory: 0
 Buy: 0
 Stars: --
-ValueForMoney:
-BottleOpenedDate:
-BottleImage:
+ValueForMoney: 
+BottleOpenedDate: 
+BottleImage: 
 ---
 
 ## Bottle Information
