@@ -1,16 +1,16 @@
 ---
 fileClass: Wine
-Name: Bethel Heights Vineyard - Estate Pinot Noir - 2023
-Winemaker: Bethel Heights Vineyard
-WineName: Estate Pinot Noir
-Vintage: "2023"
+Name: Renieri - Invetro Toscana - 2022
+Winemaker: Renieri
+WineName: Invetro Toscana
+Vintage: "2022"
 Type: Red wine
-Variety: Pinot Noir
-Country-Region: United States - Eola-Amity Hills
-Vineyard: Justice, Lewman, and Bethel Heights estate
-ABV: 13.3
+Variety: Sangiovese, Merlot, Cabernet Sauvignon
+Country-Region: Italy - Toscana
+Vineyard: 
+ABV: 14.5
 Style:
-Price: 
+Price: "21.99"
 PurchaseSource: 
 PurchaseLink:
 Stars: --

@@ -1,16 +1,16 @@
 ---
 fileClass: Wine
-Name: Uccelliera - Rosso di Montalcino - 2021
-Winemaker: Uccelliera
-WineName: Rosso di Montalcino
-Vintage: "2021"
-Type: Red wine
-Variety: Sangiovese
-Country-Region: Italy - Montalcino
-Vineyard: 
+Name: Valravn - Valravn Chardonnay 2024 - 2024
+Winemaker: Valravn
+WineName: Valravn Chardonnay 2024
+Vintage: "2024"
+Type: White wine
+Variety: Chardonnay
+Country-Region: USA - Sonoma County
+Vineyard: Russian River Valley (core), Dry Creek (some), Sonoma Coast (Marine Layer designated: Bohemian, Heintz, Gaps Crown, Hawk Hill, MLV Estate)
 ABV: 14.5
 Style:
-Price: "26.99"
+Price: "19.99"
 PurchaseSource: 
 PurchaseLink:
 Stars: --

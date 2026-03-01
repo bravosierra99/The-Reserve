@@ -1,16 +1,16 @@
 ---
 fileClass: Wine
-Name: Uccelliera - Rosso di Montalcino - 2021
-Winemaker: Uccelliera
-WineName: Rosso di Montalcino
-Vintage: "2021"
+Name: Bethel Heights - Pinot Noir Estate - 2023
+Winemaker: Bethel Heights
+WineName: Pinot Noir Estate
+Vintage: "2023"
 Type: Red wine
-Variety: Sangiovese
-Country-Region: Italy - Montalcino
-Vineyard: 
-ABV: 14.5
+Variety: Pinot Noir
+Country-Region: USA - Eola-Amity Hills
+Vineyard: Bethel Heights Vineyard
+ABV: 13.2
 Style:
-Price: "26.99"
+Price: "34.99"
 PurchaseSource: 
 PurchaseLink:
 Stars: --

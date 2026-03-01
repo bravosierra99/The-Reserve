@@ -1,16 +1,16 @@
 ---
 fileClass: Wine
-Name: Uccelliera - Rosso di Montalcino - 2021
-Winemaker: Uccelliera
-WineName: Rosso di Montalcino
-Vintage: "2021"
+Name: Masciarelli - Marina Cvetic Montepulciano d'Abruzzo Riserva - 2020
+Winemaker: Masciarelli
+WineName: Marina Cvetic Montepulciano d'Abruzzo Riserva
+Vintage: "2020"
 Type: Red wine
-Variety: Sangiovese
-Country-Region: Italy - Montalcino
-Vineyard: 
+Variety: Montepulciano
+Country-Region: Italy - Montepulciano d'Abruzzo DOC
+Vineyard: San Martino Rosso
 ABV: 14.5
 Style:
-Price: "26.99"
+Price: "24.99"
 PurchaseSource: 
 PurchaseLink:
 Stars: --

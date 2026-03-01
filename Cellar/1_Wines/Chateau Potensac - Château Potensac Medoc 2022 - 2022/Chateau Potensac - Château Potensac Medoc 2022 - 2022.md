@@ -1,16 +1,16 @@
 ---
 fileClass: Wine
-Name: Uccelliera - Rosso di Montalcino - 2021
-Winemaker: Uccelliera
-WineName: Rosso di Montalcino
-Vintage: "2021"
+Name: Chateau Potensac - Château Potensac Medoc 2022 - 2022
+Winemaker: Chateau Potensac
+WineName: Château Potensac Medoc 2022
+Vintage: "2022"
 Type: Red wine
-Variety: Sangiovese
-Country-Region: Italy - Montalcino
-Vineyard: 
+Variety: Bordeaux-style Red Blend
+Country-Region: France - Médoc
+Vineyard: Château Potensac
 ABV: 14.5
 Style:
-Price: "26.99"
+Price: "31.95"
 PurchaseSource: 
 PurchaseLink:
 Stars: --

@@ -1,16 +1,16 @@
 ---
 fileClass: Wine
-Name: Uccelliera - Rosso di Montalcino - 2021
-Winemaker: Uccelliera
-WineName: Rosso di Montalcino
-Vintage: "2021"
+Name: Chateau de Saint Cosme - Cotes du Rhone - 2024
+Winemaker: Chateau de Saint Cosme
+WineName: Cotes du Rhone
+Vintage: "2024"
 Type: Red wine
-Variety: Sangiovese
-Country-Region: Italy - Montalcino
-Vineyard: 
+Variety: Grenache, Syrah, and Mourvedre
+Country-Region: France - Côtes du Rhône
+Vineyard: Chateau de Saint Cosme
 ABV: 14.5
 Style:
-Price: "26.99"
+Price: "18.99"
 PurchaseSource: 
 PurchaseLink:
 Stars: --

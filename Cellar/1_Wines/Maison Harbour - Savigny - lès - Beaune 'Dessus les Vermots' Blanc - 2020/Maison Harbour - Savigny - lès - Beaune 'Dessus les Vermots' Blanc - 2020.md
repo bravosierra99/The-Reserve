@@ -1,16 +1,16 @@
 ---
 fileClass: Wine
-Name: Uccelliera - Rosso di Montalcino - 2021
-Winemaker: Uccelliera
-WineName: Rosso di Montalcino
-Vintage: "2021"
-Type: Red wine
-Variety: Sangiovese
-Country-Region: Italy - Montalcino
-Vineyard: 
-ABV: 14.5
+Name: Maison Harbour - Savigny - lès - Beaune 'Dessus les Vermots' Blanc - 2020
+Winemaker: Maison Harbour
+WineName: Savigny - lès - Beaune 'Dessus les Vermots' Blanc
+Vintage: "2020"
+Type: White wine
+Variety: Chardonnay
+Country-Region: France - Côte de Beaune
+Vineyard: Dessus les Vermots
+ABV: 13.5
 Style:
-Price: "26.99"
+Price: "44.99"
 PurchaseSource: 
 PurchaseLink:
 Stars: --
